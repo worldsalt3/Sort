@@ -1,5 +1,11 @@
-export class CharactersCollection {
-  constructor(public data: string) {}
+import { Sorter } from './Sorter'
+
+
+
+export class CharactersCollection extends Sorter{
+  constructor(public data: string) {
+    super()
+  }
 
   get length(): number {
     return this.data.length
@@ -18,6 +24,5 @@ export class CharactersCollection {
     characters[rightIndex] = leftHand
 
     this.data = characters.join('')
-
   }
 }
